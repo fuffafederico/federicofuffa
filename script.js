@@ -1,6 +1,4 @@
-// ========================================
-// NAVBAR: Hamburger toggle per mobile
-// ========================================
+// ===== MENU MOBILE =====
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 
@@ -8,83 +6,78 @@ menuToggle.addEventListener("click", () => {
   menu.classList.toggle("open");
 });
 
-// ========================================
-// TEMA: Automatico in base alla modalità del dispositivo
-// ========================================
-function applyTheme() {
-  const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-  document.body.classList.toggle("light", prefersLight);
-}
+// Chiudi menu quando clicchi un link
+document.querySelectorAll("#menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("open");
+  });
+});
 
-applyTheme();
-window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", applyTheme);
+// ===== NAVBAR ON SCROLL =====
+const navbar = document.querySelector("nav");
 
-// ========================================
-// LOGHI: Aggiornamento loghi chiaro/scuro
-// ========================================
-const navLogo = document.getElementById("nav-logo");
-const heroLogo = document.getElementById("hero-logo");
-
-function updateLogos() {
-  if (document.body.classList.contains("light")) {
-    navLogo.src = "img/logo1.png";
-    heroLogo.src = "img/logo1.png";
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
   } else {
-    navLogo.src = "img/logo1b.png";
-    heroLogo.src = "img/logo1b.png";
+    navbar.classList.remove("scrolled");
   }
-}
-updateLogos();
-window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", updateLogos);
+});
 
-// ========================================
-// EMAILJS: Invia email dal form contatti
-// ========================================
-(function() {
-  emailjs.init("Xkb_09maKtPCot8ya");
-})();
+// ===== FORM CON FORMSPREE =====
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
 
-const contactForm = document.getElementById("contact-form");
-const contactMessage = document.getElementById("form-status");
-
-if (contactForm) {
-  contactForm.addEventListener("submit", function(e) {
+if (form) {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+    const data = new FormData(form);
+    const action = form.action;
 
-    if (!name || !email || !message) {
-      contactMessage.textContent = "Per favore, compila tutti i campi.";
-      contactMessage.style.color = "red";
-      return;
+    status.textContent = "Invio in corso...";
+    status.style.color = "#ccc";
+
+    try {
+      const response = await fetch(action, {
+        method: form.method,
+        body: data,
+        headers: { Accept: "application/json" }
+      });
+
+      if (response.ok) {
+        status.textContent = "✅ Messaggio inviato con successo!";
+        status.style.color = "lightgreen";
+        form.reset();
+      } else {
+        status.textContent = "❌ Errore nell'invio, riprova.";
+        status.style.color = "tomato";
+      }
+    } catch (error) {
+      status.textContent = "⚠️ Connessione fallita, riprova più tardi.";
+      status.style.color = "orange";
     }
-
-    emailjs.send("service_m8qoi4s", "template_k0arone", {
-        name: name,        // {{name}} nel template
-        email: email,      // {{email}} nel template (Reply To)
-        message: message   // {{message}} nel template
-    })
-    .then(() => {
-        contactMessage.textContent = "Messaggio inviato con successo! ✅";
-        contactMessage.style.color = "lightgreen";
-        contactForm.reset();
-    })
-    .catch((error) => {
-        console.error("Errore invio:", error);
-        contactMessage.textContent = "Errore nell'invio. Riprova più tardi.";
-        contactMessage.style.color = "red";
-    });
   });
 }
 
-// ========================================
-// CARD INSTAGRAM: rende tutta la card cliccabile
-// ========================================
-const instagramCard = document.querySelector(".instagram-card");
-if (instagramCard) {
-  instagramCard.addEventListener("click", () => {
-    window.open("https://www.instagram.com/fedefuffa_/", "_blank");
+// ===== FADE-IN ON SCROLL =====
+const faders = document.querySelectorAll(".fade-in");
+
+// Funzione observer
+const appearOptions = {
+  threshold: 0.2,
+  rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("visible");
+    observer.unobserve(entry.target);
   });
-}
+}, appearOptions);
+
+// Attivo observer sugli elementi con classe .fade-in
+faders.forEach(el => {
+  appearOnScroll.observe(el);
+});

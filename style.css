@@ -29,10 +29,16 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1.5rem; /* navbar più fine */
+  padding: 0.8rem 1.5rem;
   border-radius: 12px;
   z-index: 1000;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease; /* transizione fluida */
+}
+
+nav.scrolled {
+  background: rgba(0,0,0,0.95);
+  padding: 0.5rem 1.2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
 nav .logo {
@@ -72,6 +78,16 @@ nav ul li a:hover {
   background: #f0f0f0;
   border-radius: 2px;
   transition: all 0.3s;
+}
+
+/* MENU MOBILE */
+#menu {
+  display: flex;
+  flex-direction: row;
+}
+
+#menu.open {
+  display: flex;
 }
 
 /* ====== SECTIONS ====== */
@@ -144,7 +160,6 @@ p { max-width: 700px; line-height: 1.6; margin: auto; }
   width: 100%;
 }
 
-/* Card generica per contatti */
 .contact-item {
   background: rgba(255, 255, 255, 0.05);
   padding: 0.8rem 1rem;
@@ -166,7 +181,6 @@ p { max-width: 700px; line-height: 1.6; margin: auto; }
   font-weight: bold;
 }
 
-/* Card Instagram intera cliccabile */
 .instagram-card {
   cursor: pointer;
   display: flex;
@@ -176,7 +190,7 @@ p { max-width: 700px; line-height: 1.6; margin: auto; }
   padding: 0.8rem 1rem;
   border-radius: 10px;
   transition: background 0.3s, transform 0.3s;
-  text-decoration: none; /* rimuove sottolineatura */
+  text-decoration: none;
   color: inherit;
 }
 
@@ -185,12 +199,15 @@ p { max-width: 700px; line-height: 1.6; margin: auto; }
   transform: translateY(-2px);
 }
 
-/* Modulo contatti */
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
+}
+
+.form-title {
+  margin-bottom: 8px;
 }
 
 .contact-form input,
@@ -277,17 +294,65 @@ body.light footer { background: #f0f0f0; color: #444; }
   h1{ font-size:2rem;}
   h2{ font-size:1.5rem;}
   p{ font-size:1rem;}
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .service-card { padding: 1.2rem; }
+  .service-card img { width: 60px; }
 }
 
 @media(max-width:768px){
   h1{ font-size:1.6rem;}
   h2{ font-size:1.3rem;}
   p{ font-size:0.95rem;}
-  .services-grid{ grid-template-columns: 1fr; gap:1.5rem;}
+
+  nav { padding: 0.6rem 1rem; }
+  .menu-toggle { display: flex; }
+
+  #menu {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 200px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+  }
+
+  #menu.open {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  #menu li { text-align: right; }
+
+  .services-grid {
+    grid-template-columns: 1fr 1fr; /* 2 colonne su tablet */
+    gap: 1rem;
+  }
+
+  .service-card { padding: 1rem; }
+  .service-card img { width: 55px; }
 }
 
 @media(max-width:480px){
-  nav{ padding:0.4rem 0.6rem;}
-  .service-card img{ width:60px;}
+  nav{ padding:0.4rem 0.6rem; }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* 1 colonna su smartphone */
+    gap: 0.8rem;
+  }
+
+  .service-card { padding: 0.8rem; }
+  .service-card img { width: 50px; }
 }
 
