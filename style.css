@@ -116,6 +116,7 @@ p { max-width: 700px; line-height: 1.6; margin: auto; }
   min-height: clamp(260px, 38vw, 420px);
 }
 
+/* --- Fix altezza card competenze --- */
 .about-card {
   position: absolute;
   inset: 0;
@@ -130,6 +131,9 @@ p { max-width: 700px; line-height: 1.6; margin: auto; }
   text-align: left;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(6px);
+
+  /* aumento spazio minimo in responsive */
+  min-height: 320px;
 }
 
 .about-card.active {
@@ -137,38 +141,6 @@ p { max-width: 700px; line-height: 1.6; margin: auto; }
   transform: translateY(0) scale(1);
   position: absolute;
   z-index: 2;
-}
-
-.about-card h3 {
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-.about-card p,
-.about-card ul {
-  line-height: 1.7;
-  font-size: 1rem;
-  color: #e5e5e5;
-}
-
-.about-card ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.about-card ul li {
-  margin-bottom: 0.5rem;
-  padding-left: 1.4rem;
-  position: relative;
-}
-
-.about-card ul li::before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: #bbb;
-  font-size: 1rem;
 }
 
 /* Frecce laterali */
@@ -195,6 +167,68 @@ p { max-width: 700px; line-height: 1.6; margin: auto; }
   background: rgba(255,255,255,0.2);
   transform: translateY(-50%) scale(1.15);
 }
+
+/* ===== SPAZIATURA TRA SEZIONI E CARDS ===== */
+.about-slider {
+  margin: 3rem auto; /* più respiro sopra e sotto */
+}
+
+.services-grid {
+  margin: 3rem auto; /* separa meglio dai titoli */
+}
+
+/* Centrare contenuto nelle about-card */
+.about-card {
+  text-align: center;
+}
+
+.about-card img {
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Rimuovi pallini lista competenze */
+.about-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-card ul li {
+  margin: 0.4rem 0;
+}
+
+
+
+/* ===== RESPONSIVE ABOUT-CARD ===== */
+@media (max-width: 768px) {
+  .about-card {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1.2rem;   /* meno padding */
+    font-size: 0.95rem;
+  }
+
+  .about-slider {
+    min-height: clamp(220px, 45vw, 360px); /* più compatta */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-card {
+    max-width: 95%;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .about-slider {
+    min-height: clamp(200px, 50vw, 320px);
+  }
+}
+
 
 /* Pallini */
 .about-dots {
