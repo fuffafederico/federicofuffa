@@ -41,7 +41,7 @@ nav.scrolled {
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
-nav .logo { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+nav .logo { display: flex; align-items: center; padding-top: 5px; gap: 8px; font-weight: 600; }
 #nav-logo { width: 20px; height: auto; margin-top: 2px; transition: transform 0.3s; }
 #nav-logo:hover { transform: scale(1.05); }
 
@@ -259,7 +259,7 @@ nav ul li a:hover { opacity: 1; color: #cfcfcf; }
   font-size: 0.95rem;
 }
 
-/* Suggerimento (sostituisce “esempi progetti”) */
+/* Suggerimento */
 .tip {
   display: flex;
   align-items: center;
@@ -270,6 +270,47 @@ nav ul li a:hover { opacity: 1; color: #cfcfcf; }
 }
 
 .tip img { width: 18px; height: 18px; filter: brightness(0) invert(1); }
+
+/* ===========================
+   PROCESSO DI LAVORO (nuovo)
+   =========================== */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.process-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.process-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+}
+
+.process-card img {
+  width: 40px; height: 40px;
+  filter: brightness(0) invert(1);
+  margin-bottom: 0.55rem;
+}
+
+.process-card h3 {
+  font-size: 1.04rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.process-card p {
+  color: #d9d9d9;
+  font-size: 0.95rem;
+}
 
 /* ===========================
    CTA finale
@@ -349,6 +390,7 @@ footer {
    =========================== */
 @media (max-width: 1024px) {
   .value-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -381,6 +423,7 @@ footer {
 
   .service-header { padding-top: 7rem; }
   .value-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {

@@ -33,7 +33,7 @@ nav.scrolled {
   padding: 0.5rem 1.2rem;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
-nav .logo { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+nav .logo { display: flex; align-items: center; padding-top: 5px; gap: 8px; font-weight: 600; }
 #nav-logo { width: 20px; height: auto; margin-top: 2px; transition: transform 0.3s; }
 #nav-logo:hover { transform: scale(1.05); }
 nav ul { list-style: none; display: flex; gap: 1.6rem; }
@@ -123,6 +123,24 @@ nav ul li a:hover { opacity: 1; color: #cfcfcf; }
 .bc-arrow:hover { background: rgba(255,255,255,0.2); transform: translateY(-50%) scale(1.12); }
 .bc-prev { left: -52px; }
 .bc-next { right: -52px; }
+
+/* 🔧 Fix frecce in responsive */
+@media (max-width: 768px) {
+  .bc-prev { left: 8px; }
+  .bc-next { right: 8px; }
+  .bc-arrow { font-size: 1.5rem; padding: 0.4rem 0.7rem; }
+}
+
+@media (max-width: 480px) {
+  .bc-arrow {
+    top: auto;
+    bottom: -52px;              /* le sposto sotto la card */
+    transform: none;            /* niente translateY */
+    background: rgba(0,0,0,0.5);
+  }
+  .bc-prev { left: 25%; }
+  .bc-next { right: 25%; }
+}
 
 .bc-stage { position: relative; width: 100%; min-height: clamp(260px, 34vw, 420px); }
 .bc-card {
