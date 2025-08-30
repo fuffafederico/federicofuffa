@@ -1,0 +1,392 @@
+/* Reset base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { height: 100%; scroll-behavior: smooth; }
+
+body {
+  background: #111;
+  color: #f0f0f0;
+  font-family: "Josefin Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* Link */
+a { color: inherit; text-decoration: none; }
+a:focus { outline: 2px dashed rgba(255,255,255,0.35); outline-offset: 2px; }
+
+/* ===========================
+   NAVBAR (se presente nell'HTML)
+   =========================== */
+nav {
+  position: fixed;
+  width: 95%;
+  max-width: 1200px;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+nav.scrolled {
+  background: rgba(0,0,0,0.95);
+  padding: 0.5rem 1.2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+nav .logo { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+#nav-logo { width: 20px; height: auto; margin-top: 2px; transition: transform 0.3s; }
+#nav-logo:hover { transform: scale(1.05); }
+
+nav ul { list-style: none; display: flex; gap: 1.6rem; }
+nav ul li a { font-weight: 700; opacity: 0.95; transition: opacity 0.25s, color 0.25s; }
+nav ul li a:hover { opacity: 1; color: #cfcfcf; }
+
+/* Hamburger (se usi menu mobile) */
+.menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.menu-toggle div { width: 25px; height: 3px; background: #f0f0f0; border-radius: 2px; transition: all 0.3s; }
+
+#menu { display: flex; flex-direction: row; }
+
+/* ===========================
+   INTESTAZIONE SERVIZIO
+   =========================== */
+.service-header {
+  background: linear-gradient(to bottom, #222, #111);
+  padding-top: 7.5rem;   /* spazio per la navbar fixed */
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.service-header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.service-header h1 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.h-icon { width: 28px; height: 28px; filter: brightness(0) invert(1); }
+
+.service-header p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #d9d9d9;
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+}
+
+/* ===========================
+   CONTENUTO SERVIZIO
+   =========================== */
+.service-content {
+  background: linear-gradient(to bottom, #111, #1a1a1a);
+  padding: 2.2rem 1.5rem 3rem;
+}
+
+.service-content > * {
+  max-width: 1000px;
+  margin: 0 auto 1.6rem;
+}
+
+/* Card/blocchi coerenti con lo stile della home */
+.service-block {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.service-block:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.service-block h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.b-icon { width: 24px; height: 24px; filter: brightness(0) invert(1); }
+
+/* Liste (tipologie + perché scegliermi) */
+.service-list { list-style: none; padding: 0; margin: 0; }
+
+.service-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.45rem 0;
+  font-size: 1.05rem;
+}
+
+.service-list li img {
+  width: 20px; height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.note-wp {
+  margin-top: 0.6rem;
+  color: #d9d9d9;
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   TECNOLOGIE (rotatore)
+   =========================== */
+.tech-rotator {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.tech-item {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.tech-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tech-item img {
+  width: 64px; height: 64px;
+  margin-bottom: 0.4rem;
+  filter: brightness(0) invert(1);
+}
+
+.tech-item h3 {
+  font-size: 1.12rem;
+  margin-bottom: 0.15rem;
+  font-weight: 600;
+}
+
+.tech-item p {
+  color: #d9d9d9;
+  font-size: 0.98rem;
+}
+
+/* Indicatori del rotatore (pallini) */
+.tech-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 0.6rem;
+}
+
+.tech-dots button {
+  width: 10px; height: 10px;
+  border: none; border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.tech-dots button.active {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+/* ===========================
+   PERCHÉ SCEGLIERE ME (cards)
+   =========================== */
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: left;
+  transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.value-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+}
+
+.value-card img {
+  width: 28px; height: 28px;
+  filter: brightness(0) invert(1);
+  margin-bottom: 0.55rem;
+}
+
+.value-card h3 {
+  font-size: 1.08rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.value-card p {
+  color: #d9d9d9;
+  font-size: 0.95rem;
+}
+
+/* Suggerimento (sostituisce “esempi progetti”) */
+.tip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1rem;
+  color: #d9d9d9;
+  font-size: 0.95rem;
+}
+
+.tip img { width: 18px; height: 18px; filter: brightness(0) invert(1); }
+
+/* ===========================
+   CTA finale
+   =========================== */
+.cta {
+  background: linear-gradient(to bottom, #1a1a1a, #111);
+  text-align: center;
+  padding: 3rem 1.5rem 3.5rem;
+}
+
+.cta h2 {
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.9rem 1.6rem;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: background 0.3s, transform 0.3s, border-color 0.3s;
+}
+
+.btn-cv:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.22);
+  transform: translateY(-2px);
+}
+
+.btn-cv img {
+  width: 20px; height: 20px; filter: brightness(0) invert(1);
+}
+
+/* ===========================
+   FOOTER (se presente nell'HTML)
+   =========================== */
+footer {
+  background: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-social img {
+  width: 24px; height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.footer-social img:hover {
+  transform: scale(1.15);
+  filter: brightness(0.8) invert(1);
+}
+
+.footer-text { font-size: 0.9rem; }
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 1024px) {
+  .value-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  /* Navbar mobile (se presente) */
+  .menu-toggle { display: flex; }
+  #menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 10px;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 200px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: max-height 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
+  }
+  #menu.open {
+    max-height: 500px;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  #menu li { text-align: right; }
+
+  .service-header { padding-top: 7rem; }
+  .value-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  nav { padding: 0.55rem 0.9rem; }
+  .service-header { padding-top: 6.5rem; }
+  .service-block { padding: 1.2rem; }
+  .tech-rotator { height: 200px; }
+  .footer-text { font-size: 0.82rem; }
+}

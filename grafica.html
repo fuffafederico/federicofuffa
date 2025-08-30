@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grafica - Federico Fuffa</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Stile specifico della pagina (niente style.css) -->
+  <link rel="stylesheet" href="css/grafica.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="img/logo1b.png" alt="Federico Fuffa Logo" id="nav-logo"></a>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div><div></div><div></div>
+    </div>
+    <ul id="menu">
+      <li><a href="index.html#hero">HOME</a></li>
+      <li><a href="index.html#about">CHI SONO</a></li>
+      <li><a href="index.html#services">SERVIZI</a></li>
+      <li><a href="index.html#contact">CONTATTI</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER SERVIZIO -->
+  <header class="service-header">
+    <div class="service-header-inner">
+      <h1>
+        <img src="https://img.icons8.com/ios-filled/28/ffffff/design.png" alt="" class="h-icon">
+        Grafica
+      </h1>
+      <p>Loghi, biglietti da visita e materiali promozionali con uno stile pulito, coerente e professionale.</p>
+    </div>
+  </header>
+
+  <!-- CONTENUTO -->
+  <section class="service-content">
+
+    <!-- Servizi offerti -->
+    <div class="service-block services-offerti">
+      <h2>
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/briefcase.png" alt="" class="b-icon">
+        Servizi offerti
+      </h2>
+
+      <div class="services-inner">
+        <div class="services-cols">
+          <ul class="service-list">
+            <li><img src="https://img.icons8.com/ios-filled/20/ffffff/paint-palette.png" alt=""> Logo design</li>
+            <li><img src="https://img.icons8.com/ios-filled/20/ffffff/visit.png" alt=""> Biglietti da visita</li>
+            <li><img src="https://img.icons8.com/ios-filled/20/ffffff/brochure.png" alt=""> Brochure / Flyer</li>
+            <li><img src="https://img.icons8.com/ios-filled/20/ffffff/price-tag.png" alt=""> Materiali promozionali</li>
+          </ul>
+          <ul class="service-list">
+            <li><img src="https://img.icons8.com/ios-filled/20/ffffff/template.png" alt=""> Template social</li>
+            <li><img src="https://img.icons8.com/ios-filled/20/ffffff/layout.png" alt=""> Impaginati editoriali</li>
+            <li><img src="https://img.icons8.com/ios-filled/20/ffffff/resize-four-directions.png" alt=""> Adattamenti formati</li>
+            <li><img src="https://img.icons8.com/ios-filled/20/ffffff/shield.png" alt=""> Linee guida brand</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Strumenti utilizzati (slide automatico) -->
+    <div class="service-block">
+      <h2>
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/settings.png" alt="" class="b-icon">
+        Strumenti utilizzati
+      </h2>
+
+      <div class="tech-rotator">
+        <div class="tech-item active">
+          <img class="affinity" src="img/affinity/photo.png" alt="Affinity Photo">
+          <h3>Affinity Photo</h3>
+          <p>Fotoritocco, compositing, mockup realistici</p>
+        </div>
+        <div class="tech-item">
+          <img class="affinity" src="img/affinity/designer.png" alt="Affinity Designer">
+          <h3>Affinity Designer</h3>
+          <p>Loghi vettoriali, icone e illustrazioni</p>
+        </div>
+        <div class="tech-item">
+          <img class="affinity" src="img/affinity/publisher.png" alt="Affinity Publisher">
+          <h3>Affinity Publisher</h3>
+          <p>Impaginazione brochure, cataloghi e materiali editoriali</p>
+        </div>
+      </div>
+
+      <div class="tech-dots" aria-label="Indicatori rotazione"></div>
+    </div>
+
+    <!-- Biglietti da visita (slider + lightbox singolo mockup) -->
+    <div class="service-block">
+      <h2>
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/visit.png" alt="" class="b-icon">
+        Biglietti da visita
+      </h2>
+
+      <div class="bc-slider" aria-label="Galleria biglietti da visita">
+        <button class="bc-arrow bc-prev" aria-label="Precedente">❮</button>
+        <button class="bc-arrow bc-next" aria-label="Successivo">❯</button>
+
+        <div class="bc-stage">
+          <!-- Card 1 -->
+          <article class="bc-card active" tabindex="0">
+            <figure class="bc-figure">
+              <div class="thumb-wrap" aria-hidden="true">
+                <img class="thumb" src="img/biglietti/fronte1.png" alt="Anteprima biglietto 1">
+              </div>
+              <span class="click-overlay" aria-hidden="true" title="Clicca per vedere il mockup"></span>
+              <figcaption>Biglietto 1</figcaption>
+            </figure>
+            <div class="mockups" hidden>
+              <a data-mockup href="img/mockup/mockup1.png" data-caption="Biglietto 1 — Mockup fronte/retro"></a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="bc-card" tabindex="0">
+            <figure class="bc-figure">
+              <div class="thumb-wrap" aria-hidden="true">
+                <img class="thumb" src="img/biglietti/fronte2.png" alt="Anteprima biglietto 2">
+              </div>
+              <span class="click-overlay" aria-hidden="true" title="Clicca per vedere il mockup"></span>
+              <figcaption>Biglietto 2</figcaption>
+            </figure>
+            <div class="mockups" hidden>
+              <a data-mockup href="img/mockup/mockup2.png" data-caption="Biglietto 2 — Mockup fronte/retro"></a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="bc-card" tabindex="0">
+            <figure class="bc-figure">
+              <div class="thumb-wrap" aria-hidden="true">
+                <img class="thumb" src="img/biglietti/fronte3.png" alt="Anteprima biglietto 3">
+              </div>
+              <span class="click-overlay" aria-hidden="true" title="Clicca per vedere il mockup"></span>
+              <figcaption>Biglietto 3</figcaption>
+            </figure>
+            <div class="mockups" hidden>
+              <a data-mockup href="img/mockup/mockup3.png" data-caption="Biglietto 3 — Mockup fronte/retro"></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <p class="tip">
+        <img src="https://img.icons8.com/ios-filled/18/ffffff/light.png" alt="">
+        Suggerimento: <strong>clicca o tocca un biglietto</strong> per aprire la lightbox e vedere il <strong>mockup</strong> in alta qualità.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Hai bisogno di grafica per il tuo brand?</h2>
+    <a href="index.html#contact" class="btn-cv">
+      <img src="https://img.icons8.com/ios-filled/20/ffffff/secured-letter.png" alt="">
+      Contattami
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-social">
+      Seguimi sui social:
+      <a href="https://www.instagram.com/fedefuffa_/" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram">
+      </a>
+      <a href="mailto:federicofuffa@outlook.it" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/gmail.png" alt="Gmail">
+      </a>
+      <a href="https://wa.me/393496320796" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" alt="WhatsApp">
+      </a>
+      <a href="https://www.facebook.com/federico.fuffa" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook">
+      </a>
+    </div>
+    <div class="footer-text">© 2025 Federico Fuffa - Tutti i diritti riservati</div>
+  </footer>
+
+  <!-- Script -->
+  <script src="js/grafica.js"></script>
+</body>
+</html>

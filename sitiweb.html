@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Siti Web - Federico Fuffa</title>
+
+  <!-- Font + stile base del sito -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Stile specifico della pagina -->
+  <link rel="stylesheet" href="css/sitiweb.css">
+</head>
+<body>
+
+  <!-- NAVBAR (uguale al sito) -->
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="img/logo1b.png" alt="Federico Fuffa Logo" id="nav-logo"></a>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div><div></div><div></div>
+    </div>
+    <ul id="menu">
+      <li><a href="index.html#hero">HOME</a></li>
+      <li><a href="index.html#about">CHI SONO</a></li>
+      <li><a href="index.html#services">SERVIZI</a></li>
+      <li><a href="index.html#contact">CONTATTI</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER SERVIZIO -->
+  <header class="service-header">
+    <div class="service-header-inner">
+      <h1>
+        <img src="https://img.icons8.com/ios-filled/28/ffffff/source-code.png" alt="" class="h-icon">
+        Siti Web
+      </h1>
+      <p>Creazione di siti moderni, responsive ed eleganti: perfetti per professionisti, aziende e portfolio personali.</p>
+    </div>
+  </header>
+
+  <!-- CONTENUTO -->
+  <section class="service-content">
+    <!-- Tipologie di siti -->
+    <div class="service-block">
+      <h2>
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/monitor.png" alt="" class="b-icon">
+        Tipologie di siti
+      </h2>
+      <ul class="service-list">
+        <li>
+          <img src="https://img.icons8.com/ios-filled/20/ffffff/web.png" alt="">
+          <span>Landing page</span>
+        </li>
+        <li>
+          <img src="https://img.icons8.com/ios-filled/20/ffffff/portfolio.png" alt="">
+          <span>Portfolio personale</span>
+        </li>
+        <li>
+          <img src="https://img.icons8.com/ios-filled/20/ffffff/company.png" alt="">
+          <span>Siti aziendali <strong>(WordPress)</strong></span>
+        </li>
+        <li>
+          <img src="https://img.icons8.com/ios-filled/20/ffffff/shopping-cart.png" alt="">
+          <span>E-commerce base <strong>(WordPress)</strong></span>
+        </li>
+      </ul>
+      <p class="note-wp">Per progetti aziendali ed e-commerce base utilizzo WordPress per garantire gestione contenuti semplice e scalabile.</p>
+    </div>
+
+    <!-- Tecnologie (con rotazione automatica) -->
+    <div class="service-block">
+      <h2>
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/settings.png" alt="" class="b-icon">
+        Tecnologie utilizzate
+      </h2>
+
+      <div class="tech-rotator">
+        <div class="tech-item active">
+          <img src="https://img.icons8.com/ios-filled/64/ffffff/html-5.png" alt="HTML5">
+          <h3>HTML5</h3>
+          <p>Struttura semantica e accessibile</p>
+        </div>
+        <div class="tech-item">
+          <img src="https://img.icons8.com/ios-filled/64/ffffff/css3.png" alt="CSS3">
+          <h3>CSS3</h3>
+          <p>Layout responsive, animazioni leggere</p>
+        </div>
+        <div class="tech-item">
+          <img src="https://img.icons8.com/ios-filled/64/ffffff/javascript.png" alt="JavaScript">
+          <h3>JavaScript</h3>
+          <p>Interazioni e componenti dinamici</p>
+        </div>
+        <div class="tech-item">
+          <img src="https://img.icons8.com/ios-filled/64/ffffff/wordpress.png" alt="WordPress">
+          <h3>WordPress</h3>
+          <p>CMS per contenuti e blog, WooCommerce base</p>
+        </div>
+        <div class="tech-item">
+          <img src="https://img.icons8.com/ios-filled/64/ffffff/github.png" alt="GitHub">
+          <h3>GitHub</h3>
+          <p>Versionamento e workflow pulito</p>
+        </div>
+      </div>
+
+      <div class="tech-dots" aria-label="Indicatori rotazione"></div>
+    </div>
+
+    <!-- Perché scegliere me (sostituisce 'Esempi di progetti') -->
+    <div class="service-block">
+      <h2>
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/idea.png" alt="" class="b-icon">
+        Perché scegliere me
+      </h2>
+      <div class="value-grid">
+        <div class="value-card">
+          <img src="https://img.icons8.com/ios-filled/28/ffffff/design.png" alt="">
+          <h3>Design moderno</h3>
+          <p>Interfacce pulite, eleganti e coerenti con il tuo brand.</p>
+        </div>
+        <div class="value-card">
+          <img src="https://img.icons8.com/ios-filled/28/ffffff/speed.png" alt="">
+          <h3>Performance</h3>
+          <p>Codice leggero, ottimizzazione base per velocità e SEO.</p>
+        </div>
+        <div class="value-card">
+          <img src="https://img.icons8.com/ios-filled/28/ffffff/support.png" alt="">
+          <h3>Supporto</h3>
+          <p>Assistenza post-lancio e piccole manutenzioni incluse.</p>
+        </div>
+      </div>
+      <!-- Consiglio sostitutivo ai progetti -->
+      <p class="tip">
+        <img src="https://img.icons8.com/ios-filled/18/ffffff/light.png" alt="">
+        Suggerimento: al posto degli esempi progetti, inserisci una sezione “Processo di lavoro” in 4 step (Brief → Design → Sviluppo → Lancio) con micro-icone.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Hai un progetto in mente?</h2>
+    <a href="index.html#contact" class="btn-cv">
+      <img src="https://img.icons8.com/ios-filled/20/ffffff/secured-letter.png" alt="">
+      Contattami
+    </a>
+  </section>
+
+  <!-- FOOTER (uguale al sito) -->
+  <footer>
+    <div class="footer-social">
+      Seguimi sui social:
+      <a href="https://www.instagram.com/fedefuffa_/" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram">
+      </a>
+      <a href="mailto:federicofuffa@outlook.it" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/gmail.png" alt="Gmail">
+      </a>
+      <a href="https://wa.me/393496320796" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" alt="WhatsApp">
+      </a>
+      <a href="https://www.facebook.com/federico.fuffa" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook">
+      </a>
+    </div>
+    <div class="footer-text">© 2025 Federico Fuffa - Tutti i diritti riservati</div>
+  </footer>
+
+  <!-- Script del sito (menu mobile, ecc. — se lo usi su index) -->
+  <script src="script.js"></script>
+  <!-- Script specifico della pagina -->
+  <script src="js/sitiweb.js"></script>
+</body>
+</html>
+

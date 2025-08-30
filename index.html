@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <title>Federico Fuffa - Sito Personale</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -37,16 +37,24 @@
     <div>
       <img src="img/logo1b.png" alt="Federico Fuffa Logo" id="hero-logo">
       <h1>Ciao, sono Federico</h1>
-      <p>Studente di informatica con la passione per la tecnologia, grafica e il web design.</p>
+      <p>18 anni, studente di informatica con la passione per la tecnologia, grafica e il web design.</p>
+      
+      <!-- Bottone Scarica CV -->
+      <a href="federicofuffa_cv.pdf" download class="btn-cv">
+        <img src="https://img.icons8.com/ios-filled/20/ffffff/download.png" alt="Download Icon">
+        Scarica CV
+      </a>
     </div>
   </section>
+
+
 
   <!-- ===== CHI SONO (SLIDER) ===== -->
   <section id="about">
     <div>
       <h2>Chi sono</h2>
       <p>
-        Sono Federico Fuffa, studente di informatica e diplomato in Amministrazione, Finanza e Marketing,
+        Sono Federico Fuffa, 18 anni, studente di informatica e diplomato in Amministrazione, Finanza e Marketing,
         con una forte passione per la tecnologia, la grafica e il web design.
       </p>
 
@@ -115,82 +123,100 @@
   </section>
 
   <!-- ===== SERVIZI ===== -->
-  <section id="services">
-    <div>
-      <h2>I miei Servizi</h2>
-      <div class="services-grid">
-        <a href="sitiweb.html" class="service-link">
-          <div class="service-card">
-            <img src="https://img.icons8.com/ios-filled/100/ffffff/source-code.png" alt="Siti Web">
-            <h3>Siti Web</h3>
-            <p>Creazione di siti web moderni, responsive ed eleganti.</p>
-          </div>
-        </a>
-        <a href="grafica.html" class="service-link">
-          <div class="service-card">
-            <img src="https://img.icons8.com/ios-filled/100/ffffff/design.png" alt="Grafica">
-            <h3>Grafica</h3>
-            <p>Progettazione di loghi, biglietti da visita e materiali promozionali.</p>
-          </div>
-        </a>
-        <a href="contenuti.html" class="service-link">
-          <div class="service-card">
-            <img src="https://img.icons8.com/ios-filled/100/ffffff/edit.png" alt="Contenuti">
-            <h3>Contenuti</h3>
-            <p>Scrittura testi per siti, blog o social. Grafica e web.</p>
-          </div>
-        </a>
-        <a href="supportotecnico.html" class="service-link">
-          <div class="service-card">
-            <img src="https://img.icons8.com/ios-filled/100/ffffff/technical-support.png" alt="Supporto">
-            <h3>Supporto Tecnico</h3>
-            <p>Assistenza informatica e consulenza digitale personalizzata.</p>
-          </div>
-        </a>
-      </div>
+<section id="services">
+  <div>
+    <h2>I miei Servizi</h2>
+
+    <!-- Messaggio introduttivo -->
+    <p class="services-hint">💡 Premi su un servizio per avere più informazioni.</p>
+
+    <div class="services-grid">
+      <a href="sitiweb.html" class="service-link">
+        <div class="service-card">
+          <img src="https://img.icons8.com/ios-filled/100/ffffff/source-code.png" alt="Siti Web">
+          <h3>Siti Web</h3>
+          <p>Creazione di siti web moderni, responsive ed eleganti.</p>
+        </div>
+      </a>
+      <a href="grafica.html" class="service-link">
+        <div class="service-card">
+          <img src="https://img.icons8.com/ios-filled/100/ffffff/design.png" alt="Grafica">
+          <h3>Grafica</h3>
+          <p>Progettazione di loghi, biglietti da visita e materiali promozionali.</p>
+        </div>
+      </a>
+      <a href="contenuti.html" class="service-link">
+        <div class="service-card">
+          <img src="https://img.icons8.com/ios-filled/100/ffffff/edit.png" alt="Contenuti">
+          <h3>Contenuti</h3>
+          <p>Scrittura testi per siti, blog o social. Grafica e web.</p>
+        </div>
+      </a>
+      <a href="supportotecnico.html" class="service-link">
+        <div class="service-card">
+          <img src="https://img.icons8.com/ios-filled/100/ffffff/technical-support.png" alt="Supporto">
+          <h3>Supporto Tecnico</h3>
+          <p>Assistenza informatica e consulenza digitale personalizzata.</p>
+        </div>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- ===== CONTATTI ===== -->
   <section id="contact">
-    <div class="contact-container">
-      <div class="contact-info">
-        <div class="contact-item">
-          <span>📞 Telefono:</span>
-          <a href="tel:+393496320796">(39) 349-632-0796</a>
-        </div>
-        <a href="https://www.instagram.com/fedefuffa_/" target="_blank" class="contact-item instagram-card">
-          <span>📸 Instagram</span>
-          <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram">
-        </a>
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="contact-item">
+        <span>📞 Telefono:</span>
+        <a href="tel:+393496320796">(39) 349-632-0796</a>
       </div>
 
-      <div class="form-wrapper">
-        <h3 class="form-title">📧 Inviami un'email</h3>
-        <form class="contact-form" id="contact-form" action="https://formspree.io/f/mleaozjn" method="POST">
-          <input type="text" name="name" id="name" placeholder="Il tuo nome" required>
-          <input type="email" name="email" id="email" placeholder="La tua email" required>
-          <textarea name="message" id="message" rows="5" placeholder="Il tuo messaggio" required></textarea>
-          <button type="submit">Invia</button>
-        </form>
-        <div id="form-status"></div>
-      </div>
+      <a href="https://www.instagram.com/fedefuffa_/" target="_blank" class="contact-item instagram-card">
+        <span>📸 Instagram</span>
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram">
+      </a>
+
+      <a href="https://www.facebook.com/federico.fuffa" target="_blank" class="contact-item facebook-card">
+        <span>📘 Facebook</span>
+        <img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook">
+      </a>
     </div>
-  </section>
+
+    <div class="form-wrapper">
+      <h3 class="form-title">📧 Inviami un'email</h3>
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/mleaozjn" method="POST">
+        <input type="text" name="name" id="name" placeholder="Il tuo nome" required>
+        <input type="email" name="email" id="email" placeholder="La tua email" required>
+        <textarea name="message" id="message" rows="5" placeholder="Il tuo messaggio" required></textarea>
+        <button type="submit">Invia</button>
+      </form>
+      <div id="form-status"></div>
+    </div>
+  </div>
+</section>
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <div class="footer-social">
-      Seguimi sui social:
-      <a href="https://www.instagram.com/fedefuffa_/" target="_blank"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram"></a>
-      <a href="mailto:federicofuffa@outlook.it" target="_blank"><img src="https://img.icons8.com/ios-filled/24/ffffff/gmail.png" alt="Gmail"></a>
-      <a href="https://wa.me/393496320796" target="_blank"><img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" alt="WhatsApp"></a>
-    </div>
-    <div class="footer-text">© 2025 Federico Fuffa - Tutti i diritti riservati</div>
-  </footer>
+  <div class="footer-social">
+    Seguimi sui social:
+    <a href="https://www.instagram.com/fedefuffa_/" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram">
+    </a>
+    <a href="mailto:federicofuffa@outlook.it" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/24/ffffff/gmail.png" alt="Gmail">
+    </a>
+    <a href="https://wa.me/393496320796" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.facebook.com/federico.fuffa" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook">
+    </a>
+  </div>
+  <div class="footer-text">© 2025 Federico Fuffa - Tutti i diritti riservati</div>
+</footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
-
-
