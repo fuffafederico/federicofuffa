@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <link rel="icon" href="img/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Supporto Tecnico - Federico Fuffa</title>
+
+  <!-- Font + stile base del sito -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Stile specifico della pagina -->
+  <link rel="stylesheet" href="css/supportotecnico.css">
+</head>
+<body>
+
+  <!-- NAVBAR (uguale al sito) -->
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="img/logo1b.png" alt="Federico Fuffa Logo" id="nav-logo"></a>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div><div></div><div></div>
+    </div>
+    <ul id="menu">
+      <li><a href="index.html#hero">HOME</a></li>
+      <li><a href="index.html#about">CHI SONO</a></li>
+      <li><a href="index.html#services">SERVIZI</a></li>
+      <li><a href="index.html#contact">CONTATTI</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER SERVIZIO -->
+  <header class="service-header">
+    <div class="service-header-inner">
+      <h1>
+        <!-- Icona cuffie/supporto -->
+        <svg class="h-icon" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+          <path d="M12 2a8 8 0 0 0-8 8v4a4 4 0 0 0 4 4h1v-6H6v-2a6 6 0 1 1 12 0v2h-3v6h1a4 4 0 0 0 4-4v-4a8 8 0 0 0-8-8z"/>
+          <circle cx="12" cy="19" r="2"/>
+        </svg>
+        Supporto Tecnico
+      </h1>
+      <p>Assistenza rapida e chiara: diagnosi, interventi su PC/Mac, rete, sicurezza e WordPress. Remoto o in sede.</p>
+    </div>
+  </header>
+
+  <!-- CONTENUTO -->
+  <section class="service-content">
+
+    <!-- COSA POSSO FARE (punti descritti) -->
+    <div class="service-block">
+      <h2>
+        <svg class="b-icon" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+          <path d="M21 7h-7V3H3v14h4v4h14zM5 15V5h7v2H8v8zM11 19v-8h8v8z"/>
+        </svg>
+        Cosa posso fare per te
+      </h2>
+      <ul class="service-list">
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M3 5h18v10H3zM7 19h10v2H7zM8 7h8v2H8z" fill="#fff"/></svg>
+          <span>Assistenza remota sicura (configurazione/risoluzione rapida)</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zm-9 9 9 4.5L21 11v6l-9 4.5L3 17v-6z" fill="#fff"/></svg>
+          <span>Rimozione malware, pulizia e ottimizzazione performance</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM7 9h10v2H7zm0 4h7v2H7z" fill="#fff"/></svg>
+          <span>Installazioni e configurazioni (driver, stampanti, software)</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M6 4h12v6H6zM3 12h18v8H3z" fill="#fff"/></svg>
+          <span>Backup e ripristino dati, verifica S.M.A.R.T. dischi</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M4 8h16v2H4zm2 4h12v2H6zm3 4h6v2H9z" fill="#fff"/></svg>
+          <span>Rete e Wi-Fi (copertura, DNS, firewall base)</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v4H4zM4 10h10v10H4zM16 10h4v10h-4z" fill="#fff"/></svg>
+          <span>WordPress: fix errori, aggiornamenti, hardening base</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- SUGGERIMENTI RAPIDI (staccati) -->
+    <div class="service-block tips-block">
+      <h2>
+        <svg class="b-icon" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+          <path d="M9 21h6v-2H9v2zm3-19a7 7 0 0 0-4 12.9V17h8v-2.1A7 7 0 0 0 12 2z" />
+        </svg>
+        Suggerimenti rapidi
+      </h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 1 5 5h-2a3 3 0 0 0-6 0H7a5 5 0 0 1 5-5zM6 9h12v11H6z" fill="#fff"/></svg>
+          <h3>Prima del ticket</h3>
+          <p>Annota il messaggio d’errore e cosa stavi facendo: riduce i tempi di diagnosi.</p>
+        </div>
+        <div class="tip-card">
+          <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9h-2a7 7 0 1 1-7-7V3z" fill="#fff"/></svg>
+          <h3>Backup smart</h3>
+          <p>Meglio 3 copie: dispositivo, disco esterno e cloud (3-2-1).</p>
+        </div>
+        <div class="tip-card">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v6H4zM6 12h12v8H6z" fill="#fff"/></svg>
+          <h3>Aggiornamenti</h3>
+          <p>Programma update OS/driver la sera: niente fermi durante il lavoro.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STRUMENTI & TECNICHE (rotatore) -->
+    <div class="service-block">
+      <h2>
+        <svg class="b-icon" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+          <path d="M10 2h4v4h-4zM4 10h4v4H4zm12 0h4v4h-4zM10 18h4v4h-4z" />
+        </svg>
+        Strumenti & Tecniche
+      </h2>
+
+      <div class="tech-rotator">
+        <div class="tech-item active">
+          <svg viewBox="0 0 24 24"><path d="M4 5h16v10H4zM7 17h10v2H7z" fill="#fff"/></svg>
+          <h3>Assistenza remota</h3>
+          <p>Sessioni cifrate con accesso temporaneo e log attività.</p>
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24"><path d="M3 4h18v4H3zM5 10h14v10H5z" fill="#fff"/></svg>
+          <h3>Diagnostica</h3>
+          <p>Test RAM, S.M.A.R.T., benchmark disco e audit software.</p>
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16v4H4zM4 12h10v6H4zM16 12h4v6h-4z" fill="#fff"/></svg>
+          <h3>Automazioni</h3>
+          <p>Script per cleanup, update e report: meno errori, più velocità.</p>
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2 2 7v10l10 5 10-5V7L12 2zm0 3.2 6 3v6.6l-6 3-6-3V8.2l6-3z" fill="#fff"/></svg>
+          <h3>Sicurezza</h3>
+          <p>Hardening OS, antivirus, firewall e best practice phishing.</p>
+        </div>
+        <div class="tech-item">
+          <svg viewBox="0 0 24 24"><path d="M6 4h12v6H6zM4 12h16v8H4z" fill="#fff"/></svg>
+          <h3>Backup versionati</h3>
+          <p>Piani 3-2-1 con test ripristino e retention personalizzata.</p>
+        </div>
+      </div>
+      <div class="tech-dots" aria-label="Indicatori rotazione"></div>
+    </div>
+
+    <!-- CARDS SLIDER: Interventi tipici -->
+    <div class="service-block">
+      <h2>
+        <svg class="b-icon" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+          <path d="M4 6h16v4H4zM4 12h10v6H4zM16 12h4v6h-4z" />
+        </svg>
+        Interventi tipici
+      </h2>
+
+      <div class="cards-slider" data-autoplay="true" data-interval="3500">
+        <button class="cards-prev" aria-label="Precedente"></button>
+        <div class="cards-viewport">
+          <div class="cards-track">
+            <article class="slide-card">
+              <svg viewBox="0 0 24 24"><path d="M4 6h16v4H4zM6 12h12v6H6z" fill="#fff"/></svg>
+              <h3>Velocizzazione PC</h3>
+              <p>Cleanup, ottimizzazione servizi, SSD check e avvio rapido.</p>
+            </article>
+            <article class="slide-card">
+              <svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM3 12l9 4.5L21 12" fill="#fff"/></svg>
+              <h3>Pulizia malware</h3>
+              <p>Rimozione sicura + patching e ripristino impostazioni.</p>
+            </article>
+            <article class="slide-card">
+              <svg viewBox="0 0 24 24"><path d="M3 10h18v4H3zM6 6h12v2H6zM6 16h12v2H6z" fill="#fff"/></svg>
+              <h3>Rete & Wi-Fi</h3>
+              <p>Copertura stabile, canali puliti, DNS ottimizzati.</p>
+            </article>
+            <article class="slide-card">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16v8H4zM6 14h12v6H6z" fill="#fff"/></svg>
+              <h3>Driver/Stampanti</h3>
+              <p>Installazioni pulite, code bloccate e condivisione LAN.</p>
+            </article>
+            <article class="slide-card">
+              <svg viewBox="0 0 24 24"><path d="M6 4h12v6H6zM4 12h16v8H4z" fill="#fff"/></svg>
+              <h3>Recupero spazio</h3>
+              <p>File temporanei, cache, snapshot e punti di ripristino.</p>
+            </article>
+            <article class="slide-card">
+              <svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 1 5 5H7a5 5 0 0 1 5-5zm-4 7h8v11H8z" fill="#fff"/></svg>
+              <h3>Check-up sicurezza</h3>
+              <p>Antivirus, firewall, account, privilegi e MFA.</p>
+            </article>
+          </div>
+        </div>
+        <button class="cards-next" aria-label="Successiva"></button>
+        <div class="cards-dots" aria-label="Indicatori slider"></div>
+      </div>
+    </div>
+
+    <!-- PROCESSO DI SUPPORTO (step ben divisi) -->
+    <div class="service-block">
+      <h2>
+        <svg class="b-icon" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+          <path d="M3 5h18v4H3zM3 11h12v4H3zM3 17h6v4H3z" />
+        </svg>
+        Processo di supporto
+      </h2>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <svg viewBox="0 0 24 24"><path d="M4 5h16v4H4zM4 11h10v8H4zM16 11h4v8h-4z" fill="#fff"/></svg>
+          <h3>Brief & diagnosi</h3>
+          <p>Raccolta info, test rapidi e piano d’azione.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <svg viewBox="0 0 24 24"><path d="M6 4h12v6H6zM4 12h16v8H4z" fill="#fff"/></svg>
+          <h3>Opzioni & preventivo</h3>
+          <p>Soluzioni chiare, tempi e costi trasparenti.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <svg viewBox="0 0 24 24"><path d="M4 6h16v4H4zM6 12h12v6H6z" fill="#fff"/></svg>
+          <h3>Intervento</h3>
+          <p>Remoto o in sede, con backup precauzionale.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <svg viewBox="0 0 24 24"><path d="M3 4h18v4H3zM5 10h14v10H5z" fill="#fff"/></svg>
+          <h3>Test & report</h3>
+          <p>Verifica finale e mini-report delle attività.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">5</div>
+          <svg viewBox="0 0 24 24"><path d="M8 4h8v4H8zM4 10h16v10H4z" fill="#fff"/></svg>
+          <h3>Follow-up</h3>
+          <p>Controllo a distanza e piccoli aggiustamenti.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Problema da risolvere subito?</h2>
+    <a href="index.html#contact" class="btn-cv">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff" aria-hidden="true">
+        <path d="M4 4h16v12H4zM2 20h20v-2H2zM6 6h12v2H6z" />
+      </svg>
+      Contattami
+    </a>
+  </section>
+
+  <!-- FOOTER (uguale al sito) -->
+  <footer>
+    <div class="footer-social">
+      Seguimi sui social:
+      <a href="https://www.instagram.com/fedefuffa_/" target="_blank" aria-label="Instagram">
+        <img src="img/insta.svg" alt="Instagram">
+      </a>
+      <a href="mailto:federicofuffa@outlook.it" target="_blank" aria-label="Email">
+        <img src="img/mail.svg" alt="Email">
+      </a>
+      <a href="https://wa.me/393496320796" target="_blank" aria-label="WhatsApp">
+        <img src="img/wa.svg" alt="WhatsApp">
+      </a>
+      <a href="https://www.facebook.com/federico.fuffa" target="_blank" aria-label="Facebook">
+        <img src="img/fb.svg" alt="Facebook">
+      </a>
+    </div>
+    <div class="footer-text">© 2025 Federico Fuffa - Tutti i diritti riservati</div>
+  </footer>
+
+  <!-- Script globale (se presente sul tuo sito) -->
+  <script src="script.js"></script>
+  <!-- Script specifico della pagina -->
+  <script src="js/supportotecnico.js"></script>
+</body>
+</html>
