@@ -131,16 +131,32 @@ nav ul li a:hover { opacity: 1; color: #cfcfcf; }
   .bc-arrow { font-size: 1.5rem; padding: 0.4rem 0.7rem; }
 }
 
-@media (max-width: 480px) {
+/* Mobile: frecce centrate lateralmente alla card */
+@media (max-width: 520px) {
   .bc-arrow {
-    top: auto;
-    bottom: -52px;              /* le sposto sotto la card */
-    transform: none;            /* niente translateY */
-    background: rgba(0,0,0,0.5);
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.6);
+    font-size: 1.4rem;
+    padding: 0.35rem 0.6rem;
   }
-  .bc-prev { left: 25%; }
-  .bc-next { right: 25%; }
+
+  .bc-prev { left: 4px; }   /* più vicine al bordo interno */
+  .bc-next { right: 4px; }
 }
+
+/* Ancora più stretto (telefono piccolo) */
+@media (max-width: 360px) {
+  .bc-prev { left: 2px; }
+  .bc-next { right: 2px; }
+}
+
+
+
 
 .bc-stage { position: relative; width: 100%; min-height: clamp(260px, 34vw, 420px); }
 .bc-card {
@@ -291,5 +307,4 @@ footer {
   .footer-text { font-size: 0.82rem; }
 
   .bc-stage { min-height: clamp(420px, 90vw, 600px); }
-  .bc-prev, .bc-next { display: none; }
 }
